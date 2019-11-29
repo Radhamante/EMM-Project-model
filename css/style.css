@@ -69,6 +69,7 @@ body{
     font-weight: 100;
 }
 #header-nav{
+    position: relative;
     display: flex;
     justify-content: center;
     margin-top: 40px;
@@ -85,7 +86,7 @@ body{
     border-left: solid 1px lightgray
 }
 
-#header-nav a:last-child{
+#header-nav a:nth-child(6){
     border-right: solid 1px lightgray
 }
 #header-nav a:hover{
@@ -94,6 +95,80 @@ body{
 #header-top nav a:hover{
     color: #cccccc;
 }
+
+
+.depliant{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    background-color: white;
+    padding: 5px 10px;
+    align-items: center;
+    border: #ccc solid 1px;
+    border-top: none; 
+    border-bottom-left-radius: 10px; 
+    border-bottom-right-radius: 10px; 
+}
+.depliant:hover{
+    display: flex;
+}
+#ttdepliant a{
+    border-left: none; 
+}
+#home{
+    left : 500px
+}
+#ttdepliant{
+    height: 100px;
+    width: 500px;
+    top: 47px;
+    position: absolute;
+}
+
+#header-nav a:nth-child(1):hover ~ div #home{
+    display: flex;
+}
+#home{
+    left: 00px;
+}
+#header-nav a:nth-child(2):hover ~ div #pages{
+    display: flex;
+    
+}
+#pages{
+    left: 68px
+}
+#header-nav a:nth-child(3):hover ~ div #element{
+    display: flex;
+    
+}
+#element{
+    left: 149px
+}    
+#header-nav a:nth-child(4):hover ~ div #blog{
+    display: flex;
+}
+#blog{
+    left: 225px
+}
+#header-nav a:nth-child(5):hover ~ div #portfolio{
+    display: flex;
+}
+#portfolio{
+    left: 307px
+}
+#header-nav a:nth-child(6):hover ~ div #gallery{
+    display: flex;
+}
+#gallery{
+    left: 400px
+}
+
+
+
+
+
+
 
 
 /* - - - - - - [article 1] - - - - - */
@@ -106,6 +181,7 @@ body{
     justify-content: space-between
 }
 .art-lien{
+    text-decoration: none;
     display: inline-flex;
     align-content: center;
     color: #686868;
@@ -313,7 +389,6 @@ body{
 .btn{
     display: flex;
     position: absolute;
-    width: min-content;
     flex-direction: row;
     background-color: #383838;
     color: white;
@@ -321,7 +396,7 @@ body{
 }
 #btn2{
     cursor: pointer;
-    left: 75px
+    left: 90px
 }
 #btn1{
     cursor: pointer;
@@ -329,7 +404,7 @@ body{
 }
 #btn3{
     cursor: pointer;
-    left: 150px
+    left: 190px
 }
 #art3-nav{
     height: 47px;
@@ -398,6 +473,7 @@ body{
     justify-content: space-between;
     width: 60%
 }
+
 #set2{
     display: none;
 }
@@ -407,8 +483,29 @@ body{
 
 /*     slider    */
 
+@keyframes slider-r {
+    from{
+        right:0
+    }
+
+    to{
+        right: 100%
+    }
+}
+@keyframes slider-l {
+    from{
+        right:100%
+    }
+
+    to{
+        right: 0
+    }
+}
+
 #slider{
     position: relative;
+    left: 0;
+    top: 0;
 }
 #main-slider{
     position: relative;
@@ -427,7 +524,7 @@ body{
     position: relative;
     width: 2500px;
     display: flex;
-    right: 40px
+    transition: 1s;
 }
 .slider-div p{
     color: #ff9100;
@@ -450,8 +547,10 @@ body{
     right: 50px;
 }
 #slider-right:active ~ #main-slider #move-slider{
-    right: +100px;
+
 }
+
+
 
 
 /*     footer    */
