@@ -1,4 +1,10 @@
+html{
+    scroll-behavior: smooth;
+    scrol
+}
+
 body{
+    
     margin: 0;
     font-family: 'Catamaran', sans-serif;
 }
@@ -121,7 +127,7 @@ body{
 #ttdepliant{
     height: 100px;
     width: 500px;
-    top: 47px;
+    top: 48px;
     position: absolute;
 }
 
@@ -129,7 +135,7 @@ body{
     display: flex;
 }
 #home{
-    left: 00px;
+    left: 2px;
 }
 #header-nav a:nth-child(2):hover ~ div #pages{
     display: flex;
@@ -143,7 +149,7 @@ body{
     
 }
 #element{
-    left: 149px
+    left: 148px
 }    
 #header-nav a:nth-child(4):hover ~ div #blog{
     display: flex;
@@ -193,7 +199,7 @@ body{
     color: #686868;
     display: flex;
     flex-direction: row;
-    width: 50%;
+    width: 170px;
     align-items: center;
     justify-content: space-around
 }
@@ -244,6 +250,7 @@ body{
     color: #686868;
     margin: 0 20px;
     max-width: 500px;
+    font-size: 2vh;
 }
 #article1 a{
     text-decoration: none;
@@ -300,14 +307,16 @@ body{
     padding-left: 30px; 
 }
 #art2-b-p p{
-    color: #686868
+    color: #686868;
+    font-size: 2vh
 }
 #art2-b-p h4{
     text-align: left
 }
 #art2-b-p div{
     width: 40%;
-    justify-content: space-between
+    justify-content: space-between;
+    flex-wrap: wrap
 }
 #art2-lien{
     margin-top: 10px;
@@ -358,6 +367,7 @@ body{
 .art2-art-p div{
     width: 80%;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 /* Right */
@@ -483,24 +493,11 @@ body{
 
 /*     slider    */
 
-@keyframes slider-r {
-    from{
-        right:0
-    }
-
-    to{
-        right: 100%
-    }
+@keyframes slider {
+    0%{right:0}
+    100%{right:1000px}
 }
-@keyframes slider-l {
-    from{
-        right:100%
-    }
 
-    to{
-        right: 0
-    }
-}
 
 #slider{
     position: relative;
@@ -525,6 +522,11 @@ body{
     width: 2500px;
     display: flex;
     transition: 1s;
+    animation-name: slider;
+    animation-duration: 5s;
+    animation-timing-function: linear; 
+    animation-iteration-count: 1;
+    animation-play-state: paused;
 }
 .slider-div p{
     color: #ff9100;
@@ -546,9 +548,13 @@ body{
 #slider-left{
     right: 50px;
 }
-#slider-right:active ~ #main-slider #move-slider{
-
+/*
+#slider-right:hover ~ #main-slider #move-slider{
+    animation-play-state: running
 }
+#slider-left:hover ~ #main-slider #move-slider{
+    animation-play-state: running;
+    animation-direction: reverse;*/
 
 
 
@@ -604,6 +610,25 @@ footer p{
     background-color: #1f1f1f;
     border-color: #686868;
     color: white;
+}
+
+
+
+#scrolUp{
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 4;
+    background-color: #ff910079;
+    color: white;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+
 }
 
 
