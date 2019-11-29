@@ -1,3 +1,17 @@
+/*
+
+
+**************************************************************************************
+*                         ceci est un tas d'essais                                   *
+**************************************************************************************
+
+
+
+
+
+
+
+
 let slider = document.getElementById("move-slider")
 let sliderRight = document.getElementById("slider-right")
 let sliderLeft = document.getElementById("slider-left")
@@ -16,3 +30,4 @@ document.getElementById("slider-right").addEventListener("click",right)
 function right() {
     document.getElementById("move-slider").style.right = 250+"px"
 }
+*/

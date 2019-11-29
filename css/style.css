@@ -548,13 +548,13 @@ body{
 #slider-left{
     right: 50px;
 }
-/*
+
 #slider-right:hover ~ #main-slider #move-slider{
     animation-play-state: running
 }
 #slider-left:hover ~ #main-slider #move-slider{
     animation-play-state: running;
-    animation-direction: reverse;*/
+    animation-direction: reverse;
 
 
 
